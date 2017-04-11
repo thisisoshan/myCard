@@ -32,8 +32,6 @@ body {
 .content {
 	padding: 50px 0;
 	display: block;
-	opacity: 0.0;
-	transition: opacity 1.0s ease;
 }
 .card {
 	z-index: 3;
@@ -71,6 +69,8 @@ a, a:hover, a:active, a:focus, a:visited {
 	color: inherit;
 }
 .img {
+	opacity: 0.0;
+	transition: all 1.0s ease;
 	width: 225px;
 	height: 225px;
 	background: #eee;
@@ -104,4 +104,40 @@ img {
 	.card {
 		transform: scale(0.75);
 	}
+}
+@keyframes fadeInDown {
+	from {
+		transform: translateY(-50px);
+		opacity: 0.0;
+		}
+	to {
+		transform: translateY(0px);
+		opacity: 1.0;
+	}
+}
+.fadeIn {
+	animation-name: fadeInDown;
+	animation-timing-function: ease;
+	animation-duration: 1.0s;
+	animation-iteration-count: 1;
+}
+@keyframes fadeInRight {
+	from {
+		transform: translateX(-50px);
+		opacity: 0.0;
+		}
+	to {
+		transform: translateX(0px);
+		opacity: 1.0;
+	}
+}
+.fadeInRight {
+	animation-name: fadeInRight;
+	animation-timing-function: ease;
+	animation-duration: 1.0s;
+	animation-iteration-count: 1;
+}
+h1, p, ul {
+	opacity: 0.0;
+	transition: all 1.0s ease;
 }
