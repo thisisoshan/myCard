@@ -10,3 +10,6 @@ function setOpaque(){
 	$("h1, p, ul").css("opacity", "1.0")
 	clearInterval(i);
 }
+function simulate(){
+	$("#call").click();
+}
